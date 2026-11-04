@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ZLRichTextDemo" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#FF6750A4</item>
+        <item name="colorPrimaryContainer">#FFD0BCFF</item>
+        <item name="android:windowBackground">@color/demo_background</item>
+        <item name="android:statusBarColor">#FFD0BCFF</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="DemoSectionTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="demo_background">#FFFEF7FF</color>
+    <color name="demo_panel">#FFF3F0FA</color>
+    <color name="demo_card">#FFFFFFFF</color>
+    <color name="demo_text">#DE000000</color>
+    <color name="demo_secondary_text">#8A000000</color>
+    <color name="demo_source_background">#FFF5F5F5</color>
+    <color name="demo_label_background">#FFEADDFF</color>
+    <!-- Colours of case 22 (day / night). -->
+    <color name="demo_preview_background">#FFF2F2F7</color>
+    <color name="demo_link">#FF2196F3</color>
+    <color name="demo_badge">#FFFF5722</color>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xml_attributed_text">网址 https://developer.android.com 和电话 010-12345678 由 zl_dataDetectorTypes 识别，链接颜色来自 zl_linkColor。maxLines = 2，截断符 zl_truncationToken 是「…更多」。这段文字足够长，会被截断。</string>
+    <string name="xml_rich_text">ZLRichTextView 的展开 / 收起全部在 XML 里配置：android:maxLines=\"3\"、zl_expandToken、zl_collapseToken、zl_expandTokenColor、zl_highlightBackgroundColor。规则仍然在代码里添加：@alice 和 #话题# 可以点击。这里再写一些文字，保证收起时一定会被截断，点击「全文」展开。</string>
+    <string name="xml_tag_text">我已阅读并同意&lt;h1&gt;《用户协议》&lt;/h1&gt;和&lt;h2&gt;《隐私政策》&lt;/h2&gt;，标签颜色、下划线、按下背景都来自 XML 属性。</string>
+    <string name="xml_any_tags_text">zl_anyTags=\"true\"：&lt;b&gt;粗体 &lt;u&gt;嵌套下划线&lt;/u&gt;&lt;/b&gt;、&lt;i&gt;斜体&lt;/i&gt;，标签样式在代码中用 tagStyles 设置。</string>
+    <string name="xml_delimiter_text">zl_tagOpenDelimiter=\"【\"、zl_tagCloseDelimiter=\"】\"：同意【h1】用户协议【/h1】和【h2】隐私政策【/h2】，&lt;h1&gt;尖括号&lt;/h1&gt; 原样显示。</string>
+    <string name="xml_bracket_text">ZLBracketTextView 默认用 [ ] 包裹标签：同意 [h1]用户协议[/h1] 和 [h2]隐私政策[h2/]。</string>
+</resources>
