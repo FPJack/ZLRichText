@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ZLAttributedTextView: text, links, truncation, font fitting. Standard TextView attributes
+         (android:text, android:textSize, android:textColor, android:maxLines, android:gravity,
+         android:padding, android:lineSpacingExtra, android:ellipsize, android:textIsSelectable,
+         android:textColorHighlight …) work as usual. -->
+    <declare-styleable name="ZLAttributedTextView">
+        <!-- Colour of links without their own style. -->
+        <attr name="zl_linkColor" format="color" />
+        <!-- Underline links without their own style (default true). -->
+        <attr name="zl_linkUnderline" format="boolean" />
+        <!-- Text colour of a pressed link. -->
+        <attr name="zl_activeLinkColor" format="color" />
+        <!-- Background colour of a pressed link. -->
+        <attr name="zl_activeLinkBackgroundColor" format="color" />
+        <!-- Text colour of links while a dialog covers the window. -->
+        <attr name="zl_inactiveLinkColor" format="color" />
+        <!-- Content recognised as links. -->
+        <attr name="zl_dataDetectorTypes">
+            <flag name="none" value="0" />
+            <flag name="link" value="1" />
+            <flag name="phoneNumber" value="2" />
+            <flag name="email" value="4" />
+            <flag name="date" value="8" />
+            <flag name="address" value="16" />
+            <flag name="all" value="31" />
+        </attr>
+        <!-- Find links up to 15dp around the finger when it is not on the text. -->
+        <attr name="zl_extendsLinkTouchArea" format="boolean" />
+        <!-- Truncation of a single line (multiple lines are truncated at the tail). -->
+        <attr name="zl_truncationMode">
+            <enum name="tail" value="0" />
+            <enum name="head" value="1" />
+            <enum name="middle" value="2" />
+        </attr>
+        <!-- Shown where the text is truncated (default "…"). -->
+        <attr name="zl_truncationToken" format="string" />
+        <!-- Colour of the truncation token. -->
+        <attr name="zl_truncationTokenColor" format="color" />
+        <!-- Shrink all fonts by the same factor when the text does not fit. -->
+        <attr name="zl_adjustsFontSizeToFit" format="boolean" />
+        <!-- Smallest font scale of zl_adjustsFontSizeToFit (0 – 1, 0 disables shrinking). -->
+        <attr name="zl_minimumScaleFactor" format="float" />
+        <!-- Draw all text in zl_highlightedTextColor. -->
+        <attr name="zl_highlighted" format="boolean" />
+        <attr name="zl_highlightedTextColor" format="color" />
+    </declare-styleable>
+
+    <!-- ZLRichTextView: rule based rendering, expand / collapse, gestures, raw text copy. -->
+    <declare-styleable name="ZLRichTextView">
+        <!-- Press highlight: text colour / background colour of tappable content. -->
+        <attr name="zl_highlightTextColor" format="color" />
+        <attr name="zl_highlightBackgroundColor" format="color" />
+        <!-- "Expand" token shown when the text is collapsed, e.g. "… 全文". -->
+        <attr name="zl_expandToken" format="string" />
+        <!-- "Collapse" token appended to the expanded text, e.g. " 收起". -->
+        <attr name="zl_collapseToken" format="string" />
+        <!-- Colour of the expand / collapse tokens. -->
+        <attr name="zl_expandTokenColor" format="color" />
+        <!-- Only collapse texts with more lines than this (when larger than maxLines). -->
+        <attr name="zl_collapseThreshold" format="integer" />
+        <!-- Initial expand state. -->
+        <attr name="zl_expanded" format="boolean" />
+        <!-- Title of the "copy raw text" menu item of selectable text. -->
+        <attr name="zl_copyRawMenuTitle" format="string" />
+    </declare-styleable>
+
+    <!-- ZLTagTextView: tag highlighting. -->
+    <declare-styleable name="ZLTagTextView">
+        <!-- Style of all tags. -->
+        <attr name="zl_tagColor" format="color" />
+        <attr name="zl_tagBackgroundColor" format="color" />
+        <attr name="zl_tagUnderline" format="boolean" />
+        <attr name="zl_tagBold" format="boolean" />
+        <attr name="zl_tagTextSize" format="dimension" />
+        <!-- Recognised tag names (regular expression), default "h\\d*". -->
+        <attr name="zl_tagNamePattern" format="string" />
+        <!-- Any tag name with nesting and self-closing tags (overrides the three below). -->
+        <attr name="zl_anyTags" format="boolean" />
+        <attr name="zl_allowsNestedTags" format="boolean" />
+        <attr name="zl_allowsSelfClosingTags" format="boolean" />
+        <!-- Tag delimiters, default "<" / ">" ("&lt;" / "&gt;" in XML): "[" / "]", "【" / "】", "{{" / "}}" … -->
+        <attr name="zl_tagOpenDelimiter" format="string" />
+        <attr name="zl_tagCloseDelimiter" format="string" />
+        <!-- Priority of the tag rule against other rules. -->
+        <attr name="zl_tagPriority" format="integer" />
+        <!-- false turns tag parsing off. -->
+        <attr name="zl_parsesTags" format="boolean" />
+    </declare-styleable>
+</resources>
