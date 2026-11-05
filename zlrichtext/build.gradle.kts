@@ -11,7 +11,7 @@ plugins {
 val onJitPack = System.getenv("JITPACK") == "true"
 val publishGroup: String = if (onJitPack) System.getenv("GROUP") ?: group.toString() else "io.github.fpjack"
 val publishArtifact: String = if (onJitPack) System.getenv("ARTIFACT") ?: rootProject.name else "zlrichtext"
-val publishVersion: String = if (onJitPack) System.getenv("VERSION") ?: version.toString() else "1.1.0"
+val publishVersion: String = if (onJitPack) System.getenv("VERSION") ?: version.toString() else "1.1.1"
 group = publishGroup
 version = publishVersion
 
@@ -53,6 +53,11 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.runner)
 }
+
+// No Gradle module metadata (.module): JitPack rewrites it and points its sources variant to a
+// file that does not exist, so IDEs show decompiled code. With the POM only, Gradle finds the
+// sources by the Maven convention (<name>-sources.jar).
+tasks.withType<GenerateModuleMetadata>().configureEach { enabled = false }
 
 publishing {
     publications {

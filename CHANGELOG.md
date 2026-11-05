@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1
+
+* Sources in the IDE (fix of 1.1.0): no Gradle module metadata is published any more. JitPack
+  rewrote the `.module` file so that its sources variant pointed to a missing file, and newer
+  Android Studio versions, which download sources through that variant, showed decompiled code.
+  With the POM only, the sources are found as `ZLRichText-<version>-sources.jar`.
+
 ## 1.1.0
 
 * Sources are available in the IDE when the library comes from JitPack: the library is
