@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0
+
+* Sources are available in the IDE when the library comes from JitPack: the library is
+  published with the JitPack coordinates (`com.github.FPJack:ZLRichText`), so JitPack no longer
+  renames the files and the sources entry of the Gradle module metadata stays valid.
+* The published version follows the git tag on JitPack.
+* README: installation with JitPack, build environment.
+
 ## 1.0.0
 
 First release: the Android version of the iOS library ZLRichLabel 2.4.0, built on `AppCompatTextView`.

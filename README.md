@@ -38,9 +38,21 @@ ZLRichText 是 iOS 富文本库 [ZLRichLabel](https://github.com/FPJack/ZLRichLa
 
 ## 安装
 
-库还没有发布到 Maven Central 时，有两种用法：
+通过 [JitPack](https://jitpack.io/#FPJack/ZLRichText) 引入：
 
-**作为模块引入**：把 `zlrichtext` 目录拷到工程里。
+```kotlin
+// settings.gradle.kts → dependencyResolutionManagement.repositories
+maven("https://jitpack.io")
+
+// app/build.gradle.kts
+dependencies {
+    implementation("com.github.FPJack:ZLRichText:<版本号>")
+}
+```
+
+版本号就是 GitHub 上的 tag。源码包会一起发布，Android Studio 里可以直接跳转到源码。
+
+也可以作为模块引入：把 `zlrichtext` 目录拷到工程里。
 
 ```kotlin
 // settings.gradle.kts
@@ -50,20 +62,6 @@ include(":zlrichtext")
 dependencies {
     implementation(project(":zlrichtext"))
 }
-```
-
-**发布到本地 Maven**：
-
-```bash
-./gradlew :zlrichtext:publishToMavenLocal
-```
-
-```kotlin
-// settings.gradle.kts → dependencyResolutionManagement.repositories
-mavenLocal()
-
-// app/build.gradle.kts
-implementation("io.github.fpjack:zlrichtext:1.0.0")
 ```
 
 库依赖 `androidx.appcompat`。库没有使用反射，不需要额外的混淆规则。
